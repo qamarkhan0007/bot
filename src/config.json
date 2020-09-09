@@ -1,0 +1,4 @@
+{
+  "baseUrl": "http://localhost:3212/",
+  "socketEndPoint": "http://localhost:3212/"
+}
