@@ -52,26 +52,26 @@ function App() {
             </div>
           <div className="chat-content">
             <div className="border w-75">
-              <div class="panel-body">
-                <ul class="chat">
+              <div className="panel-body">
+                <ul className="chat">
                   {state && state.length
                     ? state.map((chat) => {
                         return (
                           <>
                             {chat && chat.userId !== "bot007" ? (
-                              <li class="right clearfix">
-                                <span class="chat-img pull-right">
+                              <li className="right clearfix">
+                                <span className="chat-img pull-right">
                                   <img
                                     src="http://placehold.it/50/FA6F57/fff&text=YOU"
                                     alt="User Avatar"
-                                    class="img-circle rounded-circle m-2"
+                                    className="img-circle rounded-circle m-2"
                                   />
                                 </span>
-                                <div class="chat-body clearfix">
-                                  <div class="header pull-right">
+                                <div className="chat-body clearfix">
+                                  <div className="header pull-right">
                                     <p className="">{chat.message}</p>
-                                    <small class="text-muted">
-                                      <span class="glyphicon glyphicon-time"></span>
+                                    <small className="text-muted">
+                                      <span className="glyphicon glyphicon-time"></span>
                                       {chat.date}
                                     </small>
                                   </div>
@@ -82,19 +82,19 @@ function App() {
                             )}
 
                             {chat && chat.userId === "bot007" ? (
-                              <li class="left clearfix">
-                                <span class="chat-img pull-left">
+                              <li className="left clearfix">
+                                <span className="chat-img pull-left">
                                   <img
                                     src="http://placehold.it/50/55C1E7/fff&text=BOT"
                                     alt="User Avatar"
-                                    class="img-circle rounded-circle m-2"
+                                    className="img-circle rounded-circle m-2"
                                   />
                                 </span>
-                                <div class="chat-body clearfix">
-                                  <div class="header pull-left">
+                                <div className="chat-body clearfix">
+                                  <div className="header pull-left">
                                     <p>{chat.message}</p>
-                                    <small class="text-muted">
-                                      <span class="glyphicon glyphicon-time"></span>
+                                    <small className="text-muted">
+                                      <span className="glyphicon glyphicon-time"></span>
                                       {chat.date}
                                     </small>
                                   </div>
@@ -109,18 +109,18 @@ function App() {
                     : "No Chats Found !!"}
                 </ul>
               </div>
-              <div class="panel-footer">
-                <div class="input-group rounded-0">
+              <div className="panel-footer">
+                <div className="input-group rounded-0">
                   <input
                     type="text"
-                    class="form-control input-sm rounded-0"
+                    className="form-control input-sm rounded-0"
                     placeholder="Type your message here..."
                     onBlur={(event) => setData(event.target.value)}
                     id="chatBoxInput"
                   />
-                  <span class="input-group-btn">
+                  <span className="input-group-btn">
                     <button
-                      class="btn btn-success rounded-0"
+                      className="btn btn-success rounded-0"
                       onClick={(event) => sendMessageFunc(event)}
                     >
                       Send
